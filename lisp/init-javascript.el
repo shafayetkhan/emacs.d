@@ -59,6 +59,19 @@
 
 
 
+;; From Howard Abrams config: https://github.com/howardabrams/dot-files/blob/master/emacs-javascript.org
+
+;; Change the word "function" to just an "f":
+(font-lock-add-keywords
+ 'js2-mode `(("\\(function *\\)("
+              (0 (progn (compose-region (match-beginning 1) (match-end 1) "ƒ")
+                        nil)))))
+
+;; Place warning font around TODO and others:
+(font-lock-add-keywords 'js2-mode
+                        '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
+                           1 font-lock-warning-face t)))
+
 ;;; Coffeescript
 
 (after-load 'coffee-mode

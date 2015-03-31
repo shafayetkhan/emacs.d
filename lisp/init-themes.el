@@ -69,7 +69,7 @@ ignored: use `custom-enabled-themes' instead."
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (color-theme-sanityinc-solarized-dark))
+  (color-theme-sanityinc-tomorrow-night))
 
 
 (provide 'init-themes)
