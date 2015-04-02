@@ -109,6 +109,7 @@
 
 
 (require-package 'browse-kill-ring)
+(browse-kill-ring-default-keybindings)
 (setq browse-kill-ring-separator "\f")
 (after-load 'page-break-lines
   (push 'browse-kill-ring-mode page-break-lines-modes))
