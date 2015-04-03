@@ -25,6 +25,15 @@
 (add-hook 'ido-setup-hook (lambda () (define-key ido-completion-map [up] 'previous-history-element)))
 
 
+
+;; Use ido-vertical-mode
+(require-package 'ido-vertical-mode)
+(ido-vertical-mode 1)
+
+;; Use, down, left, right to navigate the options and through history/directories
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
+(setq ido-vertical-show-count t)
+
 
 
 (provide 'init-ido)
