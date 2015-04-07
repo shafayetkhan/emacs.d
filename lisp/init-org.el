@@ -339,5 +339,13 @@ typical word processor."
      (sql . nil)
      (sqlite . t))))
 
+
+;; Use fancy bullets
+(require-package 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+;; Make code pretty
+(setq org-src-fontify-natively t)
+
 
 (provide 'init-org)
