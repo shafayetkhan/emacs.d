@@ -3,7 +3,8 @@
   (global-anzu-mode t)
   (diminish 'anzu-mode)
   (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
-  (global-set-key [remap query-replace] 'anzu-query-replace))
+  (global-set-key [remap query-replace] 'anzu-query-replace)
+  (global-set-key (kbd "C-c C-q") 'anzu-query-replace-regexp))
 
 ;; Activate occur easily inside isearch
 (define-key isearch-mode-map (kbd "C-o") 'isearch-occur)
