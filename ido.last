@@ -15,6 +15,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/shafi/.emacs.d/"
  "/Users/shafi/.emacs.d/lisp/"
  "/Users/shafi/dev/layer3tv/embedded-fedex/"
  "/Users/shafi/org/"
@@ -30,7 +31,6 @@
  "/Users/shafi/"
  "/Users/shafi/dev/layer3tv/seac_upload/"
  "/Users/shafi/dev/layer3tv/qe-stb-tools/"
- "/Users/shafi/.emacs.d/"
  "/Users/shafi/.node-tests/"
  "/Users/shafi/dev/layer3tv/embedded-fedex/lib/"
  "/Users/shafi/dev/scripts/"
@@ -53,9 +53,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/" (21635 35628 0 0) "Shared/" "shafi/" "Guest/" ".localized" "../" "./")
+ ("/Users/shafi/.emacs.d/" (21797 57139 0 0) "var/" "site-lisp/" "recentf" "README.md" "lisp/" "LICENSE" "init.el" "ido.last" "history" "eshell/" "elpa/" "custom.el" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".mc-lists.el" ".gitignore" ".git/" ".agignore" "../" "./")
 
- ("/Users/shafi/.emacs.d/" (21797 56911 0 0) "var/" "site-lisp/" "recentf" "README.md" "lisp/" "LICENSE" "init.el" "ido.last" "history" "eshell/" "elpa/" "custom.el" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".mc-lists.el" ".gitignore" ".git/" ".agignore" "../" "./")
+ ("/Users/" (21635 35628 0 0) "Shared/" "shafi/" "Guest/" ".localized" "../" "./")
 
  ("/Users/shafi/org/STB/" (21797 52867 0 0) "yung-trafficcop.org" "winterfell_stb.org" "why_do_i_need_to_register_with_portal_everytime.org" "update_the_box_my_version.org" "UEI-voice-nuance-travis.org" "travis.org" "swissknife.org" "stb_instrumentation.org" "stb-test.org" "seachange.org" "Qs.org" "qe-debug.txt" "qe-debug.org" "qe-debug-my20.txt" "provision.org" "node-crypto.org" "midland_stb.org" "kcec_univsion2.txt" "investor_demo_feb.org" "integrating_analytics.org" "gana_playmosic_test.org" "gana_mosaic.org" "eric_secure_crt_sessions.org" "embedded-jenkins.org" "channel_change_play.org" "channel_change.org" "cc-wemo.org" "building_trellis.org" "azita_stb.org" "auxbox-setup.org" "automated_analytics.org" ".DS_Store" "../" "./")
 
