@@ -58,6 +58,7 @@
 (require 'init-auto-complete)
 (require 'init-windows)
 (require 'init-sessions)
+(require 'init-shell) ; <shafi>
 (require 'init-fonts)
 (require 'init-mmm)
 
