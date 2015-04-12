@@ -16,16 +16,16 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/shafi/org/"
  "/Users/shafi/.emacs.d/lisp/"
+ "/Users/shafi/org/"
  "/Users/shafi/"
+ "/Users/shafi/.emacs.d/"
  "/Users/shafi/.dotfiles/zsh/"
  "/Users/shafi/dev/layer3tv/common/logger/"
  "/Users/shafi/org/STB/"
  "/Users/shafi/org/bug/"
  "/Users/shafi/org/iTerm/"
  "/Users/shafi/dev/layer3tv/"
- "/Users/shafi/.emacs.d/"
  "/Users/shafi/dev/layer3tv/embedded-fedex/"
  "/Users/shafi/dev/layer3tv/common/logger/conf/"
  "/Users/shafi/dev/layer3tv/common/layer3-sdk/"
@@ -43,31 +43,31 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init-editing-utils.el"
  "purcell-notes.org"
+ "learning-lisp.org"
+ ".zsh_history"
  "init-sessions.el"
  "mount_braveheart_data1.org"
  ".profile"
  "zshenv.symlink"
  "zshrc.symlink"
  ".zshrc"
- ".zsh_history"
- "logger.js"
- "provision.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/shafi/.emacs.d/lisp/" (21801 25838 0 0) "init-xterm.el" "init-windows.el" "init-vc.el" "init-utils.el" "init-uniquify.el" "init-themes.el" "init-textile.el" "init-sql.el" "init-spelling.el" "init-slime.el" "init-site-lisp.el" "init-shell.el" "init-sessions.el" "init-ruby-mode.el" "init-recentf.el" "init-rails.el" "init-python-mode.el" "init-proxies.el" "init-php.el" "init-paredit.el" "init-osx-keys.el" "init-org.el" "init-nxml.el" "init-mmm.el" "init-misc.el" "init-markdown.el" "init-locales.el" "init-lisp.el" "init-ledger.el" "init-javascript.el" "init-isearch.el" "init-ido.el" "init-ibuffer.el" "init-html.el" "init-hippie-expand.el" "init-haskell.el" "init-haml.el" "init-gui-frames.el" "init-grep.el" "init-github.el" "init-git.el" "init-frame-hooks.el" "init-fonts.el" "init-flyspell.el" "init-flycheck.el" "init-exec-path.el" "init-erlang.el" "init-elpa.el" "init-editing-utils.el" "init-dired.el" "init-dash.el" "init-darcs.el" "init-csv.el" "init-css.el" "init-crontab.el" "init-compile.el" "init-compat.el" "init-common-lisp.el" "init-clojure.el" "init-clojure-cider.el" "init-benchmarking.el" "init-auto-complete.el" ".dir-locals.el" "../" "./")
+ ("/Users/shafi/.emacs.d/lisp/" (21801 48677 0 0) "init-xterm.el" "init-windows.el" "init-vc.el" "init-utils.el" "init-uniquify.el" "init-themes.el" "init-textile.el" "init-sql.el" "init-spelling.el" "init-slime.el" "init-site-lisp.el" "init-shell.el" "init-sessions.el" "init-ruby-mode.el" "init-recentf.el" "init-rails.el" "init-python-mode.el" "init-proxies.el" "init-php.el" "init-paredit.el" "init-osx-keys.el" "init-org.el" "init-nxml.el" "init-mmm.el" "init-misc.el" "init-markdown.el" "init-locales.el" "init-lisp.el" "init-ledger.el" "init-javascript.el" "init-isearch.el" "init-ido.el" "init-ibuffer.el" "init-html.el" "init-hippie-expand.el" "init-haskell.el" "init-haml.el" "init-gui-frames.el" "init-grep.el" "init-github.el" "init-git.el" "init-frame-hooks.el" "init-fonts.el" "init-flyspell.el" "init-flycheck.el" "init-exec-path.el" "init-erlang.el" "init-elpa.el" "init-editing-utils.el" "init-dired.el" "init-dash.el" "init-darcs.el" "init-csv.el" "init-css.el" "init-crontab.el" "init-compile.el" "init-compat.el" "init-common-lisp.el" "init-clojure.el" "init-clojure-cider.el" "init-benchmarking.el" "init-auto-complete.el" ".dir-locals.el" "../" "./")
+
+ ("/Users/shafi/.emacs.d/" (21801 48678 0 0) "var/" "site-lisp/" "recentf" "README.md" "lisp/" "LICENSE" "init.el" "ido.last" "history" "eshell/" "elpa/" "custom.el" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".mc-lists.el" ".gitignore" ".git/" ".emacs.desktop.lock" ".agignore" "../" "./")
+
+ ("/Users/shafi/" (21801 45998 0 0) "vnc/" "VisualOn/" "test.js" "stbshare/" "secure-crt.key" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "learn/" "Dropbox/" "Drivers/" "Downloads/" "Documents/" "doc/" "dev/" "Desktop/" "braveheart/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-Shafayet’s MacBook Pro-5.0.5" ".zcompdump-Shafayet’s MacBook Pro-5.0.2" ".vnc/" ".virtualenvs/" ".viminfo" ".Trash/" ".tmpstuff/" ".terminfo/" ".ssh/" ".slime-history.eld" ".slime/" ".sh_history" ".profile" ".pip/" ".oh-my-zsh/" ".npmrc" ".npm/" ".node-tests/" ".node-gyp/" ".node/" ".mongorc.js" ".master_requirements" ".lesshst" ".hgignore_global" ".gnupg/" ".gitignore_global" ".gitconfig" ".fonts/" ".emacs.d_shafayet/" ".emacs.d/" ".emacs-test/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".config/" ".CFUserTextEncoding" ".cask/" ".Bucket Explorer/" ".bash_history" ".AWSConfig" ".aws/" "../" "./")
+
+ ("/Users/shafi/org/" (21801 45574 0 0) "warehouse_bulk_reference.org" "vnc.org" "ux/" "unixcommands.org" "TIWO.org" "tasks.org" "steve-purcell-emacs.org" "STB/" "serial_device_server.org" "securecrt_license.txt" "SecureCRT/" "seachange_logs.org" "qe-monitors/" "purcell-notes.org" "purcell-hot-keys.org" "printer_issue.org" "postMsg.org" "mount_braveheart_data1.org" "meetings/" "makefile-notes.org" "magit-notes.org" "maestro.org" "learning-lisp.org" "learning-js.org" "launch_web_server.org" "jenkins.org" "iterm2.org" "iTerm/" "investor-demo.org" "investigating-warehouse.org" "interview-questions.org" "git.org" "frequent.org" "fedex.org" "eric.org" "eric-aws-build.org" "embedded-layer3tv-package.org" "elasticsearch-analytics.org" "dev-common.pem" "dan_singer_ux_debug.org" "dan_build_bash_history.org" "copying_stb_files.org" "bug/" "broadcom_account.org" "BO-TEST/" "beechwoord.org" "beechwood/" "azita-meeting-notes.org" "aws.org" "api-notes.org" "alpha/" "accounts/" ".DS_Store" ".#learning-lisp.org" "#learning-lisp.org#" "../" "./")
 
  ("/Users/shafi/org/iTerm/" (21801 20116 0 0) "20150411_124052.Default.w1t0p2.81591.2c8d5bdd.log" "20150411_124052.Default.w1t0p1.81591.be11bb84.log" "20150411_124052.Default.w1t0p0.81591.789c05b5.log" "20150411_124051.Default.w0t0p3.81591.cfde05ec.log" "20150411_124051.Default.w0t0p2.81591.915164e5.log" "20150411_124051.Default.w0t0p1.81591.9b3410cb.log" "20150411_124051.Default.w0t0p0.81591.ad96950d.log" "20150410_165843.Default.w1t0p2.79895.fbb59104.log" "20150410_165843.Default.w1t0p1.79895.2a6ccac.log" "20150410_165843.Default.w1t0p0.79895.cce7b789.log" "20150410_165843.Default.w0t0p3.79895.bd69332f.log" "20150410_165843.Default.w0t0p2.79895.7de6e7f6.log" "20150410_165843.Default.w0t0p1.79895.9727b2f1.log" "20150410_165843.Default.w0t0p0.79895.d37f457a.log" "20150410_163759.Default.w1t0p2.79542.e52c53a3.log" "20150410_163759.Default.w1t0p1.79542.edaa33eb.log" "20150410_163759.Default.w1t0p0.79542.2901b112.log" "20150410_163759.Default.w0t0p3.79542.5d80bf65.log" "20150410_163759.Default.w0t0p2.79542.90e01909.log" "20150410_163759.Default.w0t0p1.79542.7457dfa1.log" "20150410_163759.Default.w0t0p0.79542.1808eb95.log" "20150410_155808.Default.w1t0p2.78915.fc3b5eb8.log" "20150410_155808.Default.w1t0p1.78915.120bd2c0.log" "20150410_155808.Default.w1t0p0.78915.1c4bb17a.log" "20150410_155808.Default.w0t0p3.78915.8c466cf5.log" "20150410_155808.Default.w0t0p2.78915.e81fe71c.log" "20150410_155808.Default.w0t0p1.78915.c9cf12ff.log" "20150410_155808.Default.w0t0p0.78915.5ce418c8.log" "20150409_215541.Default.w1t0p2.77212.8c0d3d42.log" "20150409_215541.Default.w1t0p1.77212.8ee50bdf.log" "20150409_215541.Default.w1t0p0.77212.71e5b992.log" "20150409_215541.Default.w0t0p3.77212.2f813b87.log" "20150409_215541.Default.w0t0p2.77212.d26f67c3.log" "20150409_215541.Default.w0t0p1.77212.7d775b4d.log" "20150409_215541.Default.w0t0p0.77212.17c07377.log" "20150409_184448.Default.w1t0p2.76269.5166483e.log" "20150409_184448.Default.w1t0p1.76269.afb2d2dd.log" "20150409_184448.Default.w1t0p0.76269.28c5ad0d.log" "20150409_184448.Default.w0t0p3.76269.5408b6ec.log" "20150409_184448.Default.w0t0p2.76269.755d5696.log" "20150409_184448.Default.w0t0p1.76269.46abb21f.log" "20150409_184448.Default.w0t0p0.76269.62e0b582.log" "../" "./")
 
  ("/Users/shafi/dev/layer3tv/common/logger/" (21800 14810 0 0) "logger_tail.js" "logger_sample.js" "logger.js" "conf/" "../" "./")
-
- ("/Users/shafi/org/" (21801 25026 0 0) "warehouse_bulk_reference.org" "vnc.org" "ux/" "unixcommands.org" "TIWO.org" "tasks.org" "steve-purcell-emacs.org" "STB/" "serial_device_server.org" "securecrt_license.txt" "SecureCRT/" "seachange_logs.org" "qe-monitors/" "purcell-notes.org" "purcell-hot-keys.org" "printer_issue.org" "postMsg.org" "mount_braveheart_data1.org" "meetings/" "makefile-notes.org" "magit-notes.org" "maestro.org" "learning-lisp.org" "learning-js.org" "launch_web_server.org" "jenkins.org" "iterm2.org" "iTerm/" "investor-demo.org" "investigating-warehouse.org" "interview-questions.org" "git.org" "frequent.org" "fedex.org" "eric.org" "eric-aws-build.org" "embedded-layer3tv-package.org" "elasticsearch-analytics.org" "dev-common.pem" "dan_singer_ux_debug.org" "dan_build_bash_history.org" "copying_stb_files.org" "bug/" "broadcom_account.org" "BO-TEST/" "beechwoord.org" "beechwood/" "azita-meeting-notes.org" "aws.org" "api-notes.org" "alpha/" "accounts/" ".DS_Store" "../" "./")
-
- ("/Users/shafi/.emacs.d/" (21801 25049 0 0) "var/" "site-lisp/" "recentf" "README.md" "lisp/" "LICENSE" "init.el" "ido.last" "history" "eshell/" "elpa/" "custom.el" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".mc-lists.el" ".gitignore" ".git/" ".agignore" "../" "./")
-
- ("/Users/shafi/" (21801 25140 0 0) "vnc/" "VisualOn/" "test.js" "stbshare/" "secure-crt.key" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "learn/" "Dropbox/" "Drivers/" "Downloads/" "Documents/" "doc/" "dev/" "Desktop/" "braveheart/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-Shafayet’s MacBook Pro-5.0.5" ".zcompdump-Shafayet’s MacBook Pro-5.0.2" ".vnc/" ".virtualenvs/" ".viminfo" ".Trash/" ".tmpstuff/" ".terminfo/" ".ssh/" ".slime-history.eld" ".slime/" ".sh_history" ".profile" ".pip/" ".oh-my-zsh/" ".npmrc" ".npm/" ".node-tests/" ".node-gyp/" ".node/" ".mongorc.js" ".master_requirements" ".lesshst" ".hgignore_global" ".gnupg/" ".gitignore_global" ".gitconfig" ".fonts/" ".emacs.d_shafayet/" ".emacs.d/" ".emacs-test/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".config/" ".CFUserTextEncoding" ".cask/" ".Bucket Explorer/" ".bash_history" ".AWSConfig" ".aws/" "../" "./")
 
  ("/Users/shafi/.dotfiles/zsh/" (21772 58461 0 0) "zshrc.symlink" "zshenv.symlink" "../" "./")
 
