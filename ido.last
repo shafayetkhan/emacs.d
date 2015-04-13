@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/shafi/.emacs.d/plugins/" . "snippets/")
  ("/Users/shafi/.dotfiles/" . "zsh/")
  ("/Users/shafi/dev/layer3tv/common/logger/" . "conf/")
  ("/Users/shafi/dev/layer3tv/embedded-tools/" . "scripts/")
@@ -10,16 +11,19 @@
  ("/Users/shafi/dev/layer3tv/common/" . "logger/")
  ("/Users/shafi/dev/layer3tv/" . "common/")
  ("/Users/shafi/dev/" . "layer3tv/")
- ("/Users/shafi/.emacs.d/" . "lisp/")
+ ("/Users/shafi/.emacs.d/" . "plugins/")
  ("/Users/shafi/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/shafi/.emacs.d/plugins/snippets/"
  "/Users/shafi/org/"
+ "/Users/shafi/.node-tests/"
  "/Users/shafi/.emacs.d/lisp/"
- "/Users/shafi/"
+ "/Users/shafi/.emacs.d_shafayet/"
  "/Users/shafi/.emacs.d/"
+ "/Users/shafi/"
  "/Users/shafi/.dotfiles/zsh/"
  "/Users/shafi/dev/layer3tv/common/logger/"
  "/Users/shafi/org/STB/"
@@ -31,11 +35,9 @@
  "/Users/shafi/dev/layer3tv/common/layer3-sdk/"
  "/Users/shafi/dev/layer3tv/embedded-fedex/conf/"
  "/Users/shafi/dev/layer3tv/embedded-layer3tv/"
- "/Users/shafi/.emacs.d_shafayet/"
  "/Users/shafi/.aws/"
  "/Users/shafi/dev/layer3tv/seac_upload/"
  "/Users/shafi/dev/layer3tv/qe-stb-tools/"
- "/Users/shafi/.node-tests/"
  "/Users/shafi/dev/layer3tv/embedded-fedex/lib/"
  "/Users/shafi/dev/scripts/"
  "/Users/shafi/dev/layer3tv/test-warehouse-sdk/"
@@ -43,27 +45,33 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "README.md"
  "purcell-notes.org"
+ "arraymap.js"
  "learning-lisp.org"
+ "shafayet.org"
+ "magit-notes.org"
  ".zshrc"
  "init-shell.el"
  "init-editing-utils.el"
  ".zsh_history"
- "init-sessions.el"
- "mount_braveheart_data1.org"
- ".profile"
- "zshenv.symlink"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/shafi/.emacs.d/" (21802 65150 0 0) "var/" "site-lisp/" "recentf" "README.md" "lisp/" "LICENSE" "init.el" "ido.last" "history" "eshell/" "elpa/" "custom.el" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".mc-lists.el" ".gitignore" ".git/" ".emacs.desktop.lock" ".agignore" "../" "./")
+ ("/Users/shafi/.emacs.d/plugins/snippets/" (21803 2529 0 0) "yaml-mode/" "udev-mode/" "typerex-mode/" "tuareg-mode/" "text-mode/" "sql-mode/" "snippet-mode/" "sh-mode/" "scala-mode/" "ruby-mode/" "rst-mode/" "rename_add_contr.py" "README.md" "python-mode/" "prog-mode/" "perl-mode/" "org-mode/" "octave-mode/" "nxml-mode/" "nsis-mode/" "nesc-mode/" "ned-mode/" "markdown-mode/" "malabar-mode/" "makefile-mode/" "makefile-gmake-mode/" "makefile-bsdmake-mode/" "makefile-automake-mode/" "m4-mode/" "lua-mode/" "lisp-mode/" "lisp-interaction-mode/" "LICENSE" "latex-mode/" "js2-mode/" "js-mode/" "java-mode/" "html-mode/" "haskell-mode/" "groovy-mode/" "go-mode/" "git-commit-mode/" "fundamental-mode/" "f90-mode/" "erlang-mode/" "erc-mode/" "ensime-mode/" "enh-ruby-mode/" "emacs-lisp-mode/" "elixir-mode/" "css-mode/" "csharp-mode/" "cpp-omnet-mode/" "cperl-mode/" "CONTRIBUTORS.txt" "conf-unix-mode/" "cmake-mode/" "clojure-mode/" "chef-mode/" "cc-mode/" "c-mode/" "c++-mode/" "applescript-mode/" "antlr-mode/" ".nosearch" ".gitignore" ".git/" "../" "./")
 
- ("/Users/shafi/" (21802 65259 0 0) "vnc/" "VisualOn/" "test.js" "stbshare/" "secure-crt.key" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "learn/" "Dropbox/" "Drivers/" "Downloads/" "Documents/" "doc/" "dev/" "Desktop/" "braveheart/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-Shafayet’s MacBook Pro-5.0.5" ".zcompdump-Shafayet’s MacBook Pro-5.0.2" ".vnc/" ".virtualenvs/" ".viminfo" ".Trash/" ".tmpstuff/" ".terminfo/" ".ssh/" ".slime-history.eld" ".slime/" ".sh_history" ".profile" ".pip/" ".oh-my-zsh/" ".npmrc" ".npm/" ".node-tests/" ".node-gyp/" ".node/" ".mongorc.js" ".master_requirements" ".lesshst" ".hgignore_global" ".gnupg/" ".gitignore_global" ".gitconfig" ".fonts/" ".emacs.d_shafayet/" ".emacs.d/" ".emacs-test/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".config/" ".CFUserTextEncoding" ".cask/" ".Bucket Explorer/" ".bash_history" ".AWSConfig" ".aws/" "../" "./")
+ ("/Users/shafi/.emacs.d/plugins/" (21803 1776 0 0) "snippets/" "../" "./")
 
- ("/Users/shafi/org/" (21802 65038 0 0) "warehouse_bulk_reference.org" "vnc.org" "ux/" "unixcommands.org" "TIWO.org" "tasks.org" "steve-purcell-emacs.org" "STB/" "serial_device_server.org" "securecrt_license.txt" "SecureCRT/" "seachange_logs.org" "qe-monitors/" "purcell-notes.org" "purcell-hot-keys.org" "printer_issue.org" "postMsg.org" "mount_braveheart_data1.org" "meetings/" "makefile-notes.org" "magit-notes.org" "maestro.org" "learning-lisp.org" "learning-js.org" "launch_web_server.org" "jenkins.org" "iterm2.org" "iTerm/" "investor-demo.org" "investigating-warehouse.org" "interview-questions.org" "git.org" "frequent.org" "fedex.org" "eric.org" "eric-aws-build.org" "embedded-layer3tv-package.org" "elasticsearch-analytics.org" "dev-common.pem" "dan_singer_ux_debug.org" "dan_build_bash_history.org" "copying_stb_files.org" "bug/" "broadcom_account.org" "BO-TEST/" "beechwoord.org" "beechwood/" "azita-meeting-notes.org" "aws.org" "api-notes.org" "alpha/" "accounts/" ".DS_Store" ".#learning-lisp.org" "#learning-lisp.org#" "../" "./")
+ ("/Users/shafi/.emacs.d/" (21803 5745 0 0) "var/" "tramp" "site-lisp/" "recentf" "README.md" "plugins/" "lisp/" "LICENSE" "init.el" "ido.last" "history" "eshell/" "elpa/" "custom.el" "auto-save-list/" "ac-comphist.dat" ".smex-items" ".session" ".mc-lists.el" ".gitignore" ".git/" ".emacs.desktop.lock" ".agignore" "../" "./")
 
- ("/Users/shafi/.emacs.d/lisp/" (21802 64991 0 0) "init-xterm.el" "init-windows.el" "init-vc.el" "init-utils.el" "init-uniquify.el" "init-themes.el" "init-textile.el" "init-sql.el" "init-spelling.el" "init-slime.el" "init-site-lisp.el" "init-shell.el" "init-sessions.el" "init-ruby-mode.el" "init-recentf.el" "init-rails.el" "init-python-mode.el" "init-proxies.el" "init-php.el" "init-paredit.el" "init-osx-keys.el" "init-org.el" "init-nxml.el" "init-mmm.el" "init-misc.el" "init-markdown.el" "init-locales.el" "init-lisp.el" "init-ledger.el" "init-javascript.el" "init-isearch.el" "init-ido.el" "init-ibuffer.el" "init-html.el" "init-hippie-expand.el" "init-haskell.el" "init-haml.el" "init-gui-frames.el" "init-grep.el" "init-github.el" "init-git.el" "init-frame-hooks.el" "init-fonts.el" "init-flyspell.el" "init-flycheck.el" "init-exec-path.el" "init-erlang.el" "init-elpa.el" "init-editing-utils.el" "init-dired.el" "init-dash.el" "init-darcs.el" "init-csv.el" "init-css.el" "init-crontab.el" "init-compile.el" "init-compat.el" "init-common-lisp.el" "init-clojure.el" "init-clojure-cider.el" "init-benchmarking.el" "init-auto-complete.el" ".dir-locals.el" "../" "./")
+ ("/Users/shafi/" (21803 5882 0 0) "vnc/" "VisualOn/" "test.js" "stbshare/" "secure-crt.key" "Public/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "learn/" "Dropbox/" "Drivers/" "Downloads/" "Documents/" "doc/" "dev/" "Desktop/" "braveheart/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-Shafayet’s MacBook Pro-5.0.5" ".zcompdump-Shafayet’s MacBook Pro-5.0.2" ".vnc/" ".virtualenvs/" ".viminfo" ".Trash/" ".tmpstuff/" ".terminfo/" ".ssh/" ".slime-history.eld" ".slime/" ".sh_history" ".profile" ".pip/" ".oh-my-zsh/" ".npmrc" ".npm/" ".node-tests/" ".node-gyp/" ".node/" ".mongorc.js" ".master_requirements" ".lesshst" ".hgignore_global" ".gnupg/" ".gitignore_global" ".gitconfig" ".fonts/" ".emacs.d_shafayet/" ".emacs.d/" ".emacs-test/" ".DS_Store" ".dropbox/" ".dotfiles/" ".dbshell" ".cups/" ".config/" ".CFUserTextEncoding" ".cask/" ".Bucket Explorer/" ".bash_history" ".AWSConfig" ".aws/" "../" "./")
+
+ ("/Users/shafi/.emacs.d/lisp/" (21803 5176 0 0) "init-xterm.el" "init-windows.el" "init-vc.el" "init-utils.el" "init-uniquify.el" "init-themes.el" "init-textile.el" "init-sql.el" "init-spelling.el" "init-slime.el" "init-site-lisp.el" "init-shell.el" "init-sessions.el" "init-ruby-mode.el" "init-recentf.el" "init-rails.el" "init-python-mode.el" "init-proxies.el" "init-php.el" "init-paredit.el" "init-osx-keys.el" "init-org.el" "init-nxml.el" "init-mmm.el" "init-misc.el" "init-markdown.el" "init-locales.el" "init-lisp.el" "init-ledger.el" "init-javascript.el" "init-isearch.el" "init-ido.el" "init-ibuffer.el" "init-html.el" "init-hippie-expand.el" "init-haskell.el" "init-haml.el" "init-gui-frames.el" "init-grep.el" "init-github.el" "init-git.el" "init-frame-hooks.el" "init-fonts.el" "init-flyspell.el" "init-flycheck.el" "init-exec-path.el" "init-erlang.el" "init-elpa.el" "init-editing-utils.el" "init-dired.el" "init-dash.el" "init-darcs.el" "init-csv.el" "init-css.el" "init-crontab.el" "init-compile.el" "init-compat.el" "init-common-lisp.el" "init-clojure.el" "init-clojure-cider.el" "init-benchmarking.el" "init-auto-complete.el" ".dir-locals.el" "../" "./")
+
+ ("/Users/shafi/org/" (21803 5209 0 0) "warehouse_bulk_reference.org" "vnc.org" "ux/" "unixcommands.org" "TIWO.org" "tasks.org" "steve-purcell-emacs.org" "STB/" "serial_device_server.org" "securecrt_license.txt" "SecureCRT/" "seachange_logs.org" "qe-monitors/" "purcell-notes.org" "purcell-hot-keys.org" "printer_issue.org" "postMsg.org" "mount_braveheart_data1.org" "meetings/" "makefile-notes.org" "magit-notes.org" "maestro.org" "learning-lisp.org" "learning-js.org" "launch_web_server.org" "jenkins.org" "iterm2.org" "iTerm/" "investor-demo.org" "investigating-warehouse.org" "interview-questions.org" "git.org" "frequent.org" "fedex.org" "eric.org" "eric-aws-build.org" "embedded-layer3tv-package.org" "elasticsearch-analytics.org" "dev-common.pem" "dan_singer_ux_debug.org" "dan_build_bash_history.org" "copying_stb_files.org" "bug/" "broadcom_account.org" "BO-TEST/" "beechwoord.org" "beechwood/" "azita-meeting-notes.org" "aws.org" "api-notes.org" "alpha/" "accounts/" ".DS_Store" "../" "./")
+
+ ("/Users/shafi/.node-tests/" (21803 5204 0 0) "wemo_stb/" "topologystringify.js" "timeout.js" "thisandprototype.js" "requirer.js" "requireme.js" "practicalnode/" "postInterval/" "objparse.js" "object_literal_ternary/" "needletest/" "getmacaddress/" "cmdline/" "closure/" "arraymap.js" "../" "./")
 
  ("/Users/shafi/org/iTerm/" (21801 53834 0 0) "20150411_220250.Default.w1t0p2.90216.6626fc12.log" "20150411_220250.Default.w1t0p1.90216.febcbe20.log" "20150411_220250.Default.w1t0p0.90216.a672bcd2.log" "20150411_220250.Default.w0t0p3.90216.77f9da6a.log" "20150411_220250.Default.w0t0p2.90216.31a6cb6c.log" "20150411_220250.Default.w0t0p1.90216.e502c51d.log" "20150411_220250.Default.w0t0p0.90216.db3fd116.log" "20150411_215330.Default.w1t0p2.89826.7cd381d5.log" "20150411_215330.Default.w1t0p1.89826.59b3d969.log" "20150411_215330.Default.w1t0p0.89826.22f0b395.log" "20150411_215330.Default.w0t0p3.89826.71448b16.log" "20150411_215330.Default.w0t0p2.89826.11ea029e.log" "20150411_215330.Default.w0t0p1.89826.95ff7d0.log" "20150411_215330.Default.w0t0p0.89826.3a3e04c0.log" "20150411_214921.Default.w1t0p2.89343.6c14edfd.log" "20150411_214921.Default.w1t0p1.89343.f933236d.log" "20150411_214921.Default.w1t0p0.89343.3c037efb.log" "20150411_214921.Default.w0t0p3.89343.8cb1652e.log" "20150411_214921.Default.w0t0p2.89343.7c0ed1a.log" "20150411_214921.Default.w0t0p1.89343.25d75365.log" "20150411_214921.Default.w0t0p0.89343.e28fdfec.log" "20150411_124052.Default.w1t0p2.81591.2c8d5bdd.log" "20150411_124052.Default.w1t0p1.81591.be11bb84.log" "20150411_124052.Default.w1t0p0.81591.789c05b5.log" "20150411_124051.Default.w0t0p3.81591.cfde05ec.log" "20150411_124051.Default.w0t0p2.81591.915164e5.log" "20150411_124051.Default.w0t0p1.81591.9b3410cb.log" "20150411_124051.Default.w0t0p0.81591.ad96950d.log" "20150410_165843.Default.w1t0p2.79895.fbb59104.log" "20150410_165843.Default.w1t0p1.79895.2a6ccac.log" "20150410_165843.Default.w1t0p0.79895.cce7b789.log" "20150410_165843.Default.w0t0p3.79895.bd69332f.log" "20150410_165843.Default.w0t0p2.79895.7de6e7f6.log" "20150410_165843.Default.w0t0p1.79895.9727b2f1.log" "20150410_165843.Default.w0t0p0.79895.d37f457a.log" "20150410_163759.Default.w1t0p2.79542.e52c53a3.log" "20150410_163759.Default.w1t0p1.79542.edaa33eb.log" "20150410_163759.Default.w1t0p0.79542.2901b112.log" "20150410_163759.Default.w0t0p3.79542.5d80bf65.log" "20150410_163759.Default.w0t0p2.79542.90e01909.log" "20150410_163759.Default.w0t0p1.79542.7457dfa1.log" "20150410_163759.Default.w0t0p0.79542.1808eb95.log" "20150410_155808.Default.w1t0p2.78915.fc3b5eb8.log" "20150410_155808.Default.w1t0p1.78915.120bd2c0.log" "20150410_155808.Default.w1t0p0.78915.1c4bb17a.log" "20150410_155808.Default.w0t0p3.78915.8c466cf5.log" "20150410_155808.Default.w0t0p2.78915.e81fe71c.log" "20150410_155808.Default.w0t0p1.78915.c9cf12ff.log" "20150410_155808.Default.w0t0p0.78915.5ce418c8.log" "20150409_215541.Default.w1t0p2.77212.8c0d3d42.log" "20150409_215541.Default.w1t0p1.77212.8ee50bdf.log" "20150409_215541.Default.w1t0p0.77212.71e5b992.log" "20150409_215541.Default.w0t0p3.77212.2f813b87.log" "20150409_215541.Default.w0t0p2.77212.d26f67c3.log" "20150409_215541.Default.w0t0p1.77212.7d775b4d.log" "20150409_215541.Default.w0t0p0.77212.17c07377.log" "20150409_184448.Default.w1t0p2.76269.5166483e.log" "20150409_184448.Default.w1t0p1.76269.afb2d2dd.log" "20150409_184448.Default.w1t0p0.76269.28c5ad0d.log" "20150409_184448.Default.w0t0p3.76269.5408b6ec.log" "20150409_184448.Default.w0t0p2.76269.755d5696.log" "20150409_184448.Default.w0t0p1.76269.46abb21f.log" "20150409_184448.Default.w0t0p0.76269.62e0b582.log" "../" "./")
 
@@ -86,8 +94,6 @@
  ("/Users/" (21635 35628 0 0) "Shared/" "shafi/" "Guest/" ".localized" "../" "./")
 
  ("/Users/shafi/dev/layer3tv/common/logger/conf/" (21781 41075 0 0) "config_local.test.json" "config_local.staging2.json" "config_local.staging.json" "config_local.prod.json" "config_local.pdaly.json" "config_local.jbaconpc.json" "config_global.json" "../" "./")
-
- ("/Users/shafi/.node-tests/" (21797 20202 0 0) "wemo_stb/" "topologystringify.js" "timeout.js" "thisandprototype.js" "requirer.js" "requireme.js" "practicalnode/" "postInterval/" "objparse.js" "object_literal_ternary/" "needletest/" "getmacaddress/" "cmdline/" "closure/" "arraymap.js" "../" "./")
 
  ("/Users/shafi/dev/layer3tv/common/layer3-sdk/" (21797 23406 0 0) "warehouse-sdk.js" "videotech-sdk.js" "vault-sdk.js" "traffic-cop-sdk.js" "sortinghat-sdk.js" "sortinghat-admin-sdk.js" "sdk-util.js" "scheduler-sdk.js" "scheduler-admin-sdk.js" "rolodex-sdk.js" "README.md" "mailman-sdk.js" "layer3-sdk.js" "grand-central-sdk.js" "gatekeeper-sdk.js" "gatekeeper-admin-sdk.js" "conf/" "catalog-sdk.js" "catalog-admin-sdk.js" "backoffice-sdk.js" "backoffice/" "auth-sdk.js" "../" "./")
 
