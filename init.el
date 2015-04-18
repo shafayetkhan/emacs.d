@@ -59,6 +59,8 @@
 (require 'init-windows)
 (require 'init-sessions)
 (require 'init-shell) ; <shafi>
+(require 'init-project) ; <shafi>
+(require 'init-views) ; <shafi>
 (require 'init-fonts)
 (require 'init-mmm)
 

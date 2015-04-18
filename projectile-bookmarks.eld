@@ -1,0 +1,1 @@
+("~/.emacs.d/" "/usr/local/" "~/dev/layer3tv/" "~/dev/layer3tv/warehouse/")
