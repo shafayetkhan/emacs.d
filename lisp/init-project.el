@@ -6,5 +6,18 @@
 (projectile-global-mode)
 
 
+;; Dired jump to projects
+
+;; Layer3 TV
+(setq l3-project-dir "~/dev/layer3tv")
+(when (file-directory-p l3-project-dir)
+  (global-set-key (kbd "C-c d l") (lambda () (interactive) (dired l3-project-dir))))
+
+;; org
+(setq org-project-dir "~/org")
+(when (file-directory-p l3-project-dir)
+  (global-set-key (kbd "C-c d o") (lambda () (interactive) (dired org-project-dir))))
+
+
 
 (provide 'init-project)
