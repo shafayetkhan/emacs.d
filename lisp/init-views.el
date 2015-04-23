@@ -1,7 +1,7 @@
 ;; <shafi> Views configuration - Easy access files
 
 ;; emacs notes
-(setq emacs-help-file "~/org/emacs-notes.org")
+(setq emacs-help-file "~/org/help/emacs-help.org")
 
 (when (file-exists-p emacs-help-file)
   (defun open-emacs-help ()
@@ -10,7 +10,7 @@
   (global-set-key (kbd "C-c i e") 'open-emacs-help))
 
 ;; git notes
-(setq git-help-file "~/org/git-help.org")
+(setq git-help-file "~/org/help/git-help.org")
 
 (when (file-exists-p git-help-file)
   (defun open-git-help ()
@@ -19,8 +19,28 @@
   (global-set-key (kbd "C-c i g") 'open-git-help))
 
 
+;;  unix notes
+(setq unix-help-file "~/org/help/unix-help.org")
+
+(when (file-exists-p unix-help-file)
+  (defun open-unix-help ()
+    (interactive)
+    (view-file-other-window unix-help-file))
+  (global-set-key (kbd "C-c i u") 'open-unix-help))
+
+
+;;  vi notes
+(setq vi-help-file "~/org/help/vi-help.org")
+
+(when (file-exists-p vi-help-file)
+  (defun open-vi-help ()
+    (interactive)
+    (view-file-other-window vi-help-file))
+  (global-set-key (kbd "C-c i v") 'open-vi-help))
+
+
 ;; work notes
-(setq work-help-file "~/org/work.org")
+(setq work-help-file "~/org/help/work-help.org")
 
 (when (file-exists-p work-help-file)
   (defun open-work-help ()
@@ -28,9 +48,8 @@
     (view-file-other-window work-help-file))
   (global-set-key (kbd "C-c i w") 'open-work-help))
 
-
-;; learning bash
-(setq learn-bash-file "~/org/learning-bash.org")
+ ;; learning bash
+(setq learn-bash-file "~/org/learn/learning-bash.org")
 
 (when (file-exists-p learn-bash-file)
   (defun open-bash-help ()
@@ -40,7 +59,7 @@
 
 
 ;; learning C
-(setq learn-c-file "~/org/learning-c.org")
+(setq learn-c-file "~/org/learn/learning-c.org")
 
 (when (file-exists-p learn-c-file)
   (defun open-c-help ()
@@ -51,7 +70,7 @@
 
 
 ;; learning lisp
-(setq learn-lisp-file "~/org/learning-lisp.org")
+(setq learn-lisp-file "~/org/learn/learning-lisp.org")
 
 (when (file-exists-p learn-lisp-file)
   (defun open-lisp-help ()
@@ -61,7 +80,7 @@
 
 
 ;; learning js
-(setq learn-js-file "~/org/learning-js.org")
+(setq learn-js-file "~/org/learn/learning-js.org")
 
 (when (file-exists-p learn-js-file)
   (defun open-js-help ()
