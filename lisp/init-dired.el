@@ -18,4 +18,7 @@
   (after-load 'dired
     (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
 
+;; Do ido-dired instead of List Directory
+(global-set-key (kbd "C-x C-d") 'ido-dired)
+
 (provide 'init-dired)

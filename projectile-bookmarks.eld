@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/org/" "~/dev/layer3tv/" "~/dev/opensource/node-logstash/" "/usr/local/" "~/dev/layer3tv/warehouse/")
+("~/.emacs.d/" "~/.dotfiles/" "~/org/" "~/dev/layer3tv/" "/usr/local/" "~/dev/opensource/node-logstash/" "~/dev/layer3tv/warehouse/")
