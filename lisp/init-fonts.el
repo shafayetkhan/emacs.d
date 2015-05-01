@@ -11,6 +11,10 @@
 
 (add-hook 'after-init-hook 'sanityinc/maybe-use-default-font-for-symbols)
 
+;; set a default font
+;; Download font from here: https://github.com/powerline/fonts
+(when (member "Inconsolata-dz for Powerline" (font-family-list))
+  (set-face-attribute 'default nil :font "Inconsolata-dz for Powerline"))
 
 ;;; Changing font sizes
 
