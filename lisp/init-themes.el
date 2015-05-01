@@ -4,6 +4,10 @@
 (require-package 'color-theme-sanityinc-solarized)
 (require-package 'color-theme-sanityinc-tomorrow)
 (require-package 'cyberpunk-theme)
+(require-package 'firecode-theme)
+(require-package 'flatland-black-theme)
+(require-package 'sublime-themes)
+
 
 ;;------------------------------------------------------------------------------
 ;; Old-style color theming support (via color-theme.el)
@@ -46,7 +50,7 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(sanityinc-tomorrow-night))
+(setq-default custom-enabled-themes '(brin))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
@@ -75,11 +79,6 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 ;; Activate other themes for fun
 ;;------------------------------------------------------------------------------
-(defun activate-cyberpunk ()
-  "Activate cyberpunk theme."
-  (interactive)
-  (load-theme 'cyberpunk t))
-
 (defun activate-molokai ()
   "Activate molokai theme."
   (interactive)
