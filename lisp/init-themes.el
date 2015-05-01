@@ -80,4 +80,9 @@ ignored: use `custom-enabled-themes' instead."
   (interactive)
   (load-theme 'cyberpunk t))
 
+(defun activate-molokai ()
+  "Activate molokai theme."
+  (interactive)
+  (load "~/.emacs.d/site-lisp/color-theme-molokai.el"))
+
 (provide 'init-themes)
