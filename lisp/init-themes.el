@@ -76,5 +76,9 @@ ignored: use `custom-enabled-themes' instead."
   (interactive)
   (color-theme-sanityinc-tomorrow-night))
 
+;;------------------------------------------------------------------------------
+;; Activate other themes for fun
+;;------------------------------------------------------------------------------
+(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/themes")
 
 (provide 'init-themes)
