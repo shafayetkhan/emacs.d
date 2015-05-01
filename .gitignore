@@ -38,3 +38,6 @@ site-lisp/package/
 /org-clock-save.el
 /ditaa.jar
 /plugins/
+/ido.last
+/projectile-bookmarks.eld
+/recentf

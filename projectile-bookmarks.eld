@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/.dotfiles/" "~/org/" "~/dev/layer3tv/" "/usr/local/" "~/dev/opensource/node-logstash/" "~/dev/layer3tv/warehouse/")
