@@ -76,12 +76,5 @@ ignored: use `custom-enabled-themes' instead."
   (interactive)
   (color-theme-sanityinc-tomorrow-night))
 
-;;------------------------------------------------------------------------------
-;; Activate other themes for fun
-;;------------------------------------------------------------------------------
-(defun activate-molokai ()
-  "Activate molokai theme."
-  (interactive)
-  (load "~/.emacs.d/site-lisp/color-theme-molokai.el"))
 
 (provide 'init-themes)
