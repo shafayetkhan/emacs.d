@@ -122,6 +122,10 @@
 (unless (server-running-p)
   (server-start))
 
+;;----------------------------------------------------------------------------
+;; Start up a webserver on demand
+;;----------------------------------------------------------------------------
+(require 'init-elnode)
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
@@ -148,6 +152,7 @@
           (lambda ()
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
+
 
 
 (provide 'init)
