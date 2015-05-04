@@ -13,8 +13,8 @@
 
 ;; set a default font
 ;; Download font from here: https://github.com/powerline/fonts
-(when (member "Inconsolata-dz for Powerline" (font-family-list))
-  (set-face-attribute 'default nil :font "Inconsolata-dz for Powerline"))
+(when (member "Inconsolata-dz" (font-family-list))
+  (set-face-attribute 'default nil :font "Inconsolata-dz"))
 
 ;;; Changing font sizes
 

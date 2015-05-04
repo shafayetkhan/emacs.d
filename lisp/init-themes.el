@@ -81,4 +81,8 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 (add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/themes")
 
+;; Note: Nice color for mode line
+;; (custom-set-faces
+;;  '(mode-line ((t (:background "#292B2D" :foreground "#3A85BD")))))
+
 (provide 'init-themes)
