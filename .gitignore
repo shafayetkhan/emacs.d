@@ -36,10 +36,9 @@ site-lisp/package/
 /.cask/
 /.sx/
 /org-clock-save.el
-/ditaa.jar
 /plugins/
 /ido.last
 /projectile-bookmarks.eld
 /recentf
 /elnode/
-/ditaa0_9.jar
+/ditaa*.jar
