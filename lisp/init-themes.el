@@ -24,10 +24,11 @@ If Emacs' native theme support is available, this setting is
 ignored: use `custom-enabled-themes' instead."
   :type 'symbol)
 
-(unless (boundp 'custom-enabled-themes)
+(unless (and (boundp 'custom-enabled-themes)
+             (display-graphic-p))
   (defun color-theme-terminal ()
     (interactive)
-    (color-theme-sanityinc-solarized-dark))
+    (load-theme 'sanityinc-tomorrow-night t))
 
   (defun apply-best-color-theme-for-frame-type (frame)
     (with-selected-frame frame
