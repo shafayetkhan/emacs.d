@@ -29,6 +29,17 @@
   (global-set-key (kbd "C-c i u") 'open-unix-help))
 
 
+;;  osx notes
+(setq osx-help-file "~/org/help/osx-help.org")
+
+(when (file-exists-p osx-help-file)
+  (defun open-osx-help ()
+    (interactive)
+    (view-file-other-window osx-help-file))
+  (global-set-key (kbd "C-c i o") 'open-osx-help))
+
+
+
 ;;  vi notes
 (setq vi-help-file "~/org/help/vi-help.org")
 
