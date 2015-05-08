@@ -86,6 +86,8 @@ typical word processor."
 
 ;;; Capturing
 
+(setq org-default-notes-file "~/org/notes.org")
+
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-capture-templates
@@ -137,6 +139,7 @@ typical word processor."
 
 ;;; Agenda views
 
+(setq org-agenda-files (quote ("~/org")))
 
 (let ((active-project-match "-INBOX/PROJECT"))
 
