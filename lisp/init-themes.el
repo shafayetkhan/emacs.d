@@ -12,7 +12,7 @@
 ;;------------------------------------------------------------------------------
 ;; Old-style color theming support (via color-theme.el)
 ;;------------------------------------------------------------------------------
-(defcustom window-system-color-theme 'color-theme-sanityinc-solarized-dark
+(defcustom window-system-color-theme 'color-theme-sanityinc-tomorrow-night
   "Color theme to use in window-system frames.
 If Emacs' native theme support is available, this setting is
 ignored: use `custom-enabled-themes' instead."
