@@ -122,6 +122,9 @@ typical word processor."
 
 ;; Allow refile to create parent tasks with confirmation
 (setq org-refile-allow-creating-parent-nodes 'confirm)
+
+;;; Tags
+(setq org-tag-alist '(("DEBUG" . ?d) ("FEAT" . ?f) ("OPS" . ?o) ("GROK" . ?g)))
 
 
 ;;; To-do settings
