@@ -343,7 +343,8 @@ typical word processor."
      (screen . nil)
      (sh . t)
      (sql . nil)
-     (sqlite . t))))
+     (sqlite . t)
+     (js . t))))
 
 
 ;; Use fancy bullets
