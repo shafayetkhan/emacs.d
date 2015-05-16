@@ -142,7 +142,12 @@ typical word processor."
 
 ;;; Agenda views
 
-(setq org-agenda-files (quote ("~/org")))
+(setq org-agenda-files
+      (delq nil
+            (mapcar (lambda (x) (and (file-exists-p x) x))
+                    '("~/org/organizer.org"
+                      "~/org/notes.org"
+                      "~/org/todos.org"))))
 
 (let ((active-project-match "-INBOX/PROJECT"))
 
