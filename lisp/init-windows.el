@@ -72,5 +72,11 @@ Call a second time to restore the original window configuration."
                   (interactive)
                   (switch-to-buffer nil)))
 
+
+;; <shafi> Ace window https://github.com/abo-abo/ace-window
+(require-package 'ace-window)
+(global-set-key (kbd "C-c w") 'ace-window)
+
+
 
 (provide 'init-windows)
