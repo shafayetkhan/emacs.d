@@ -26,7 +26,7 @@
 
 
 
-;; Use ido-vertical-mode
+;; <shafi> Use ido-vertical-mode
 (require-package 'ido-vertical-mode)
 (ido-vertical-mode 1)
 

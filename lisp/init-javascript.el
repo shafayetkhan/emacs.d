@@ -59,7 +59,7 @@
 
 
 
-;; From Howard Abrams config: https://github.com/howardabrams/dot-files/blob/master/emacs-javascript.org
+;; <shafi> From Howard Abrams config: https://github.com/howardabrams/dot-files/blob/master/emacs-javascript.org
 
 ;; Change the word "function" to just an "f":
 (font-lock-add-keywords

@@ -355,7 +355,7 @@ With arg N, insert N newlines."
 (setq guide-key/recursive-key-sequence-flag t)
 (diminish 'guide-key-mode)
 
-;; yasnippets
+;; <shafi> yasnippets
 (require-package 'yasnippet)
 (yas-global-mode 1)
 
