@@ -159,8 +159,26 @@ typical word processor."
 ;; Allow refile to create parent tasks with confirmation
 (setq org-refile-allow-creating-parent-nodes 'confirm)
 
-;;; Tags
-(setq org-tag-alist '(("DEBUG" . ?d) ("FEAT" . ?f) ("OPS" . ?o) ("GROK" . ?g)))
+;; Tags
+(setq org-tag-alist '((:startgroup . nil)
+                      ("@work" . nil)
+                      (:grouptags . nil)
+                      ("@debug" . ?d)
+                      ("@feat" . ?f)
+                      ("@grok" . ?g)
+                      ("@jira" . ?j)
+                      ("@ops" . ?o)
+                      (:endgroup . nil)
+                      (:startgroup . nil)
+                      ("@life" . nil)
+                      (:grouptags . nil)
+                      ("@health" . ?h)
+                      ("@finance" . ?f)
+                      ("@errand" . ?x)
+                      (:endgroup . nil)
+                      ("@emacs" . ?e)
+                      ("@refile" . ?r)))
+
 
 
 ;;; To-do settings
@@ -168,7 +186,16 @@ typical word processor."
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!/!)")
               (sequence "PROJECT(p)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
-              (sequence "WAITING(w@/!)" "HOLD(h)" "|" "CANCELLED(c@/!)"))))
+              (sequence "WAITING(w@/!)" "HOLD(h)" "|" "CANCELLED(c@/!)" "MEETING"))))
+
+(setq org-todo-state-tags-triggers
+      (quote (("CANCELLED" ("CANCELLED" . t))
+              ("WAITING" ("WAITING" . t))
+              ("HOLD" ("WAITING") ("HOLD" . t))
+              (done ("WAITING") ("HOLD"))
+              ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
+              ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
+              ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
 
 (setq org-todo-keyword-faces
       (quote (("NEXT" :inherit warning)
@@ -181,9 +208,11 @@ typical word processor."
 (setq org-agenda-files
       (delq nil
             (mapcar (lambda (x) (and (file-exists-p x) x))
-                    '("~/org/organizer.org"
-                      "~/org/notes.org"
-                      "~/org/todos.org"))))
+                    '("~/org/notes.org"
+                      "~/org/gtd.org"
+                      "~/org/help/emacs-help.org"
+                      "~/org/help/work-help.org"))))
+
 
 (let ((active-project-match "-INBOX/PROJECT"))
 
@@ -194,6 +223,9 @@ typical word processor."
         org-agenda-sticky t
         org-agenda-start-on-weekday nil
         org-agenda-span 'day
+        org-agenda-skip-scheduled-if-done t
+        org-agenda-skip-deadline-if-done t
+        org-reverse-note-order t
         org-agenda-include-diary nil
         org-agenda-sorting-strategy
         '((agenda habit-down time-up user-defined-up effort-up category-keep)
@@ -202,9 +234,14 @@ typical word processor."
           (search category-up))
         org-agenda-window-setup 'current-window
         org-agenda-custom-commands
-        `(("N" "Notes" tags "NOTE"
+        `(("N" "Notes" tags "@note"
            ((org-agenda-overriding-header "Notes")
             (org-tags-match-list-sublevels t)))
+          ("R" "Refile" tags "@refile"
+           ((org-agenda-overriding-header "Refile")
+            (org-tags-match-list-sublevels t)
+            (org-agenda-skip-function
+             '(org-agenda-skip-entry-if 'regexp "\\* Bank\\|\\* Inbox"))))
           ("g" "GTD"
            ((agenda "" nil)
             (tags "INBOX"
