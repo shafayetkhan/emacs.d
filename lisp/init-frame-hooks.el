@@ -1,7 +1,7 @@
 (defvar after-make-console-frame-hooks '()
   "Hooks to run after creating a new TTY frame")
 ; <shafi> temporary hack: open org-todo-list upon startup
-(defvar after-make-window-system-frame-hooks '((lambda ()  (org-agenda-list 5)))
+(defvar after-make-window-system-frame-hooks '((lambda ()  (org-agenda-list 7)))
   "Hooks to run after creating a new window-system frame")
 
 (defun run-after-make-frame-hooks (frame)
