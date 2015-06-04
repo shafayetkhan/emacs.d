@@ -365,6 +365,28 @@ With arg N, insert N newlines."
 
 (global-set-key (kbd "C-c i y") 'yas/describe-tables)
 
+;; <shafi> Rebind quoted-insert
+;; I don't care about making the buffer read-only
+(global-set-key (kbd "C-x C-q") 'quoted-insert)
+
+;; Set aliases to scroll-up and scroll-down for clarity
+(defalias 'scroll-ahead 'scroll-up)
+(defalias 'scroll-behind 'scroll-down)
 
+;; Line-at-a-time scrolling
+
+(defun scroll-n-lines-ahead (&optional n)
+  "Scroll ahead N lines (1 by default)."
+  (interactive "P")
+  (scroll-ahead (prefix-numeric-value n)))
+
+(defun scroll-n-lines-behind (&optional n)
+  "Scroll behind N line (1 by default)."
+  (interactive "P")
+  (scroll-behind (prefix-numeric-value n)))
+
+(global-set-key (kbd "C-q") 'scroll-n-lines-behind)
+(global-set-key (kbd "C-z") 'scroll-n-lines-ahead)
+
 
 (provide 'init-editing-utils)
