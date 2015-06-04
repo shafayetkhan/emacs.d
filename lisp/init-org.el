@@ -98,29 +98,58 @@ typical word processor."
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-capture-templates
-      `(("t" "todo" entry (file "")  ; "" => org-default-notes-file
-         "* NEXT %?\n%U\n" :clock-resume t)
-        ("n" "note" entry (file "")
-         "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
+      `(("t" "todo" entry (file+headline "~/org/gtd.org" "Inbox")
+         "* NEXT %?\n   SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))\n%U\n" :clock-resume t)
+        ("n" "note" entry (file+headline "" "Bank") ; "" => org-default-notes-file
+         "* %? :@note:\n%U\n%a\n" :clock-resume t)
+        ("m" "meeting" entry (file+headline "~/org/gtd.org" "Meetings")
+         "* MEETING with %? :@meeting:\n%U" :clock-in t :clock-resume t)
         ))
 
 
+
+;;; Effort
+(setq org-global-properties
+      '(("Effort_ALL". "0 0:10 0:30 1:00 2:00 3:00 4:00")))
+
+(add-hook 'org-clock-in-prepare-hook
+          'my-org-mode-ask-effort)
+
+(defun my-org-mode-ask-effort ()
+  "Ask for an effort estimate when clocking in."
+  (unless (org-entry-get (point) "Effort")
+    (let ((effort
+           (completing-read
+            "Effort: "
+            (org-entry-get-multivalued-property (point) "Effort"))))
+      (unless (equal effort "")
+        (org-set-property "Effort" effort)))))
 
 ;;; Refiling
 
 (setq org-refile-use-cache nil)
 
 ; Targets include this file and any file contributing to the agenda - up to 5 levels deep
-(setq org-refile-targets '((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5)))
+(setq org-refile-targets '((nil :maxlevel . 5)
+                           ("~/org/notes.org" :maxlevel . 2)
+                           ("~/org/gtd.org" :maxlevel . 2)
+                           ("~/org/help/work-help.org" :maxlevel . 3)
+                           ("~/org/help/osx-help.org" :maxlevel . 2)
+                           ("~/org/help/git-help.org" :maxlevel . 2)
+                           ("~/org/help/unix-help.org" :maxlevel . 2)
+                           ("~/org/help/emacs-help.org" :maxlevel . 3)
+                           ("~/org/learn/learning-bash.org" :maxlevel . 2)
+                           ("~/org/learn/learning-js.org" :maxlevel . 2)))
 
 (after-load 'org-agenda
   (add-to-list 'org-agenda-after-show-hook 'org-show-entry))
 
 ;; Exclude DONE state tasks from refile targets
-(defun sanityinc/verify-refile-target ()
-  "Exclude todo keywords with a done state from refile targets."
-  (not (member (nth 2 (org-heading-components)) org-done-keywords)))
-(setq org-refile-target-verify-function 'sanityinc/verify-refile-target)
+(defun sk/verify-refile-target ()
+  "Exclude todo keywords with a done state and emacs keybindings from refile targets."
+  (and (not (member (nth 2 (org-heading-components)) org-done-keywords))
+       (not (string-match-p "^\".*?\"" (nth 4 (org-heading-components))))))
+(setq org-refile-target-verify-function 'sk/verify-refile-target)
 
 ;; Targets start with the file name - allows creating level 1 tasks
 ;;(setq org-refile-use-outline-path (quote file))
