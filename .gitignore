@@ -2,7 +2,7 @@
 /.emacs.desktop
 /auto-save-list
 /.session
-/custom.el
+#/custom.el
 *.elc
 CVS
 .svn
@@ -42,3 +42,4 @@ site-lisp/package/
 /recentf
 /elnode/
 /ditaa*.jar
+/site-lisp/org-mode/
