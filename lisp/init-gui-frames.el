@@ -6,7 +6,7 @@
   (unless (and *is-a-mac* window-system)
     (suspend-frame)))
 
-(global-set-key (kbd "C-z") 'sanityinc/maybe-suspend-frame)
+(global-set-key (kbd "C-x C-z") 'sanityinc/maybe-suspend-frame)
 
 
 ;;----------------------------------------------------------------------------
