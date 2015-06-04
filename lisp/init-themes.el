@@ -7,6 +7,7 @@
 (require-package 'firecode-theme)
 (require-package 'flatland-black-theme)
 (require-package 'sublime-themes)
+(require-package 'base16-theme)
 
 
 ;;------------------------------------------------------------------------------
@@ -51,7 +52,7 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(brin))
+(setq-default custom-enabled-themes '(base16-default-dark brin))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
