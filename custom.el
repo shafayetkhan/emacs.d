@@ -15,4 +15,5 @@
  '(diff-refine-added ((t (:inherit diff-refine-change :background "SpringGreen4"))))
  '(diff-refine-removed ((t (:inherit diff-refine-change :background "firebrick4"))))
  '(mode-line ((t (:background "#292B2D" :foreground "#3A85BD"))))
- '(mode-line-buffer-id ((t (:foreground "SpringGreen3")))))
+ '(mode-line-buffer-id ((t (:foreground "SpringGreen3"))))
+ '(region ((t (:background "#555")))))
