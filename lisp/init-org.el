@@ -9,9 +9,6 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/org-mode/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/org-mode/contrib/lisp" t)
 
-;; <shafi> Export for confluence markdown
-;; TODO: read more about org new export engine
-(require 'ox-confluence)
 
 (define-key global-map (kbd "C-c l") 'org-store-link)
 (define-key global-map (kbd "C-c a") 'org-agenda)
@@ -431,6 +428,9 @@ typical word processor."
 
 ;; Make code pretty
 (setq org-src-fontify-natively t)
+
+;; Add confluence to export backends
+(add-to-list 'org-export-backends 'confluence)
 
 
 (provide 'init-org)
