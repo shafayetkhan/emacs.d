@@ -86,6 +86,7 @@
 ;; ---------------------------------------------------------------------------
 
 (setq inferior-js-program-command "js")
+(setenv "NODE_NO_READLINE" "1")
 
 (defvar inferior-js-minor-mode-map (make-sparse-keymap))
 (define-key inferior-js-minor-mode-map "\C-x\C-e" 'js-send-last-sexp)
@@ -110,5 +111,46 @@
     (add-hook 'skewer-mode-hook
               (lambda () (inferior-js-keys-mode -1)))))
 
+
+
+;; <shafi> Node Support
+;; ---------------------------------------------------------------------------
+;; Run and interact with nodejs-repl
+;; ---------------------------------------------------------------------------
+
+(require-package 'nodejs-repl)
+
+(defun send-region-to-nodejs (start end)
+  "Send region to `nodejs-repl' process."
+  (interactive "r")
+  (save-selected-window
+    (save-excursion (nodejs-repl)))
+  (comint-send-region (get-process nodejs-repl-process-name)
+                      start end))
+
+(defun send-buffer-to-nodejs ()
+  (interactive)
+  (send-region-to-nodejs (point-min) (point-max)))
+
+(defun send-last-sexp-to-nodejs ()
+  (interactive)
+  (send-region-to-nodejs (save-excursion (backward-sexp) (point)) (point)))
+
+(defun nodejs-load-file (filename)
+  "Load a file in the nodejs repl."
+  (interactive "f")
+  (let ((filename (expand-file-name filename)))
+    (save-selected-window
+      (save-excursion (nodejs-repl)))
+    (comint-send-string (get-process nodejs-repl-process-name) (concat "require(\"" filename "\")\n"))))
+
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (define-key js2-mode-map (kbd "C-c C-r") 'send-region-to-nodejs)
+            (define-key js2-mode-map (kbd "C-c C-b") 'send-buffer-to-nodejs)
+            (define-key js2-mode-map (kbd "C-c C-c") 'send-last-sexp-to-nodejs)
+            (define-key js2-mode-map (kbd "C-c C-l") 'nodejs-load-file)))
+
+
 
 (provide 'init-javascript)
