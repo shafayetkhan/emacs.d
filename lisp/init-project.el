@@ -20,7 +20,7 @@
 
 ;; org
 (setq org-project-dir "~/org")
-(when (file-directory-p l3-project-dir)
+(when (file-directory-p org-project-dir)
   (global-set-key (kbd "C-c d o") (lambda () (interactive) (dired org-project-dir))))
 
 
