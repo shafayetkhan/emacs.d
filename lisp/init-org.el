@@ -422,7 +422,7 @@ typical word processor."
 (after-load 'org
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((R . t)
+   `((R . t)
      (ditaa . t)
      (dot . t)
      (emacs-lisp . t)
@@ -435,7 +435,7 @@ typical word processor."
      (python . t)
      (ruby . t)
      (screen . nil)
-     (sh . t)
+     (,(if (locate-library "ob-sh") 'sh 'shell) . t)
      (sql . nil)
      (sqlite . t)
      (js . t))))
