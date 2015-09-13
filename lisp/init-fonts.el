@@ -13,8 +13,12 @@
 
 ;; set a default font
 ;; Download font from here: https://github.com/google/fonts
-(when (member "Source Code Pro" (font-family-list))
-  (setq my-font "Source Code Pro-12")
+;; (when (member "Source Code Pro" (font-family-list))
+;;   (setq my-font "Source Code Pro-12")
+;;   (set-face-attribute 'default nil :font my-font))
+
+(when (member "Input Mono" (font-family-list))
+  (setq my-font "Input Mono-12")
   (set-face-attribute 'default nil :font my-font))
 
 ;;; Changing font sizes
