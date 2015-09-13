@@ -88,4 +88,12 @@ ignored: use `custom-enabled-themes' instead."
 ;; (custom-set-faces
 ;;  '(mode-line ((t (:background "#292B2D" :foreground "#3A85BD")))))
 
+;;------------------------------------------------------------------------------
+;; Activate powerline
+;;------------------------------------------------------------------------------
+(require-package 'powerline)
+(set-face-background 'mode-line "#292B2D")
+(set-face-foreground 'mode-line "#3A85BD")
+(powerline-default-theme)
+
 (provide 'init-themes)
