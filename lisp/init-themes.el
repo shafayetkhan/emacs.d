@@ -8,6 +8,7 @@
 (require-package 'flatland-black-theme)
 (require-package 'sublime-themes)
 (require-package 'base16-theme)
+(require-package 'ample-theme)
 
 
 ;;------------------------------------------------------------------------------
