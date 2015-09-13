@@ -94,6 +94,7 @@ ignored: use `custom-enabled-themes' instead."
 (require-package 'powerline)
 (set-face-background 'mode-line "#292B2D")
 (set-face-foreground 'mode-line "#3A85BD")
+(set-face-foreground 'mode-line-highlight "White")
 (powerline-default-theme)
 
 (provide 'init-themes)
