@@ -95,12 +95,15 @@ typical word processor."
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-capture-templates
-      `(("t" "todo" entry (file+headline "~/org/gtd.org" "Inbox")
-         "* NEXT %?\n   SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))\n%U\n" :clock-resume t)
+      `(("t" "todo")
+        ("tw" "work" entry (file+headline "~/org/gtd.org" "Inbox")
+         "* JIRA %?\n   SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))\n%U\n" :clock-resume t :prepend t)
+        ("tt" "task" entry (file+headline "~/org/gtd.org" "Inbox")
+         "* NEXT %?\n   SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+1d\"))\n%U\n" :clock-resume t :prepend t)
         ("n" "note" entry (file+headline "" "Bank") ; "" => org-default-notes-file
-         "* %? :@note:\n%U\n%a\n" :clock-resume t)
+         "* %? :@note:\n%U\n%a\n" :clock-resume t :prepend t)
         ("m" "meeting" entry (file+headline "~/org/gtd.org" "Meetings")
-         "* MEETING with %? :@meeting:\n%U" :clock-in t :clock-resume t)
+         "* MEETING with %? :@meeting:\n%U" :clock-in t :clock-resume t :prepend t)
         ))
 
 
@@ -188,6 +191,7 @@ typical word processor."
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!/!)")
+              (sequence "JIRA(j)" "NEXT(n)" "DOING(i)" "DELEGATED(h@/!)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
               (sequence "PROJECT(p)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")
               (sequence "WAITING(w@/!)" "HOLD(h)" "|" "CANCELLED(c@/!)" "MEETING"))))
 
@@ -211,8 +215,10 @@ typical word processor."
 (setq org-agenda-files
       (delq nil
             (mapcar (lambda (x) (and (file-exists-p x) x))
-                    '("~/org/notes.org"
+                    '("~/Code/playground/org-todoist/todoist.org"
+                      "~/org/notes.org"
                       "~/org/gtd.org"
+                      "~/org/gtd2.org"
                       "~/org/help/emacs-help.org"
                       "~/org/help/work-help.org"))))
 
@@ -286,6 +292,13 @@ typical word processor."
                         (org-agenda-todo-ignore-scheduled 'future)
                         (org-agenda-sorting-strategy
                          '(category-keep))))
+            (tags-todo "/DELEGATED"
+                       ((org-agenda-overriding-header "Delegated")
+                        (org-agenda-tags-todo-honor-ignore-options nil)
+                        (org-agenda-todo-ignore-scheduled 'future)
+                        (org-agenda-sorting-strategy
+                         '(category-keep))
+                        ))
             (tags-todo "-INBOX/HOLD"
                        ((org-agenda-overriding-header "On Hold")
                         ;; TODO: skip if a parent is WAITING or HOLD
