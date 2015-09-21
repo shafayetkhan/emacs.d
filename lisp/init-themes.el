@@ -3,18 +3,11 @@
 
 (require-package 'color-theme-sanityinc-solarized)
 (require-package 'color-theme-sanityinc-tomorrow)
-(require-package 'cyberpunk-theme)
-(require-package 'firecode-theme)
-(require-package 'flatland-black-theme)
-(require-package 'sublime-themes)
-(require-package 'base16-theme)
-(require-package 'ample-theme)
-
 
 ;;------------------------------------------------------------------------------
 ;; Old-style color theming support (via color-theme.el)
 ;;------------------------------------------------------------------------------
-(defcustom window-system-color-theme 'color-theme-sanityinc-tomorrow-night
+(defcustom window-system-color-theme 'color-theme-sanityinc-solarized-dark
   "Color theme to use in window-system frames.
 If Emacs' native theme support is available, this setting is
 ignored: use `custom-enabled-themes' instead."
@@ -26,11 +19,10 @@ If Emacs' native theme support is available, this setting is
 ignored: use `custom-enabled-themes' instead."
   :type 'symbol)
 
-(unless (and (boundp 'custom-enabled-themes)
-             (display-graphic-p))
+(unless (boundp 'custom-enabled-themes)
   (defun color-theme-terminal ()
     (interactive)
-    (load-theme 'sanityinc-tomorrow-night t))
+    (color-theme-sanityinc-solarized-dark))
 
   (defun apply-best-color-theme-for-frame-type (frame)
     (with-selected-frame frame
@@ -53,7 +45,7 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(base16-default-dark brin))
+(setq-default custom-enabled-themes '(sanityinc-solarized-light))
 
 ;; Ensure that themes will be applied even if they have not been customized
 (defun reapply-themes ()
@@ -77,24 +69,7 @@ ignored: use `custom-enabled-themes' instead."
 (defun dark ()
   "Activate a dark color theme."
   (interactive)
-  (color-theme-sanityinc-tomorrow-night))
+  (color-theme-sanityinc-solarized-dark))
 
-;;------------------------------------------------------------------------------
-;; Activate other themes for fun
-;;------------------------------------------------------------------------------
-(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/themes")
-
-;; Note: Nice color for mode line
-;; (custom-set-faces
-;;  '(mode-line ((t (:background "#292B2D" :foreground "#3A85BD")))))
-
-;;------------------------------------------------------------------------------
-;; Activate powerline
-;;------------------------------------------------------------------------------
-(require-package 'powerline)
-(set-face-background 'mode-line "#292B2D")
-(set-face-foreground 'mode-line "#3A85BD")
-(set-face-foreground 'mode-line-highlight "White")
-(powerline-default-theme)
 
 (provide 'init-themes)
