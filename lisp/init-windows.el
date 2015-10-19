@@ -74,7 +74,7 @@ Call a second time to restore the original window configuration."
 
 
 (unless (memq window-system '(nt w32))
-  (windmove-default-keybindings 'control))
+  (windmove-default-keybindings 'super))
 
 
 ;; <shafi> Ace window https://github.com/abo-abo/ace-window
