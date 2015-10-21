@@ -452,8 +452,5 @@ typical word processor."
 ;; Make code pretty
 (setq org-src-fontify-natively t)
 
-;; Add confluence to export backends
-(add-to-list 'org-export-backends 'confluence)
-
 
 (provide 'init-org)
