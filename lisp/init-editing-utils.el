@@ -46,6 +46,8 @@
 
 (global-set-key (kbd "S-<return>") 'sanityinc/newline-at-end-of-line)
 
+;; <shafi> Use C-\ to indent region as well as C-M-\ (I don't see much use for toggle-input-method)
+(global-set-key (kbd "C-\\") 'indent-region)
 
 
 (when (eval-when-compile (string< "24.3.1" emacs-version))
