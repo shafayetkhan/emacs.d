@@ -359,4 +359,9 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
                 'smarter-move-beginning-of-line)
 
+;; Enable guru-mode and stop using arrow keys
+(require-package 'guru-mode)
+(guru-global-mode +1)
+;(setq guru-warn-only t)
+
 (provide 'init-editing-utils)
