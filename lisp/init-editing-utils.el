@@ -66,6 +66,9 @@
 (diminish 'undo-tree-mode)
 
 
+;;; <shafi> Turn-on highlighting line globally
+(global-hl-line-mode +1)
+
 (require-package 'highlight-symbol)
 (dolist (hook '(prog-mode-hook html-mode-hook css-mode-hook))
   (add-hook hook 'highlight-symbol-mode)
