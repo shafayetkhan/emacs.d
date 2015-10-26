@@ -217,7 +217,7 @@ typical word processor."
 (setq org-agenda-files
       (delq nil
             (mapcar (lambda (x) (and (file-exists-p x) x))
-                    '("~/Code/playground/org-todoist/todoist.org"
+                    '("~/.emacs.d/site-lisp/org-todoist/todoist.org"
                       "~/org/notes.org"
                       "~/org/gtd.org"
                       "~/org/gtd2.org"
@@ -452,5 +452,7 @@ typical word processor."
 ;; Make code pretty
 (setq org-src-fontify-natively t)
 
-
+;; <shafi> Require init-todoist
+(require 'org-todoist)
+
 (provide 'init-org)
