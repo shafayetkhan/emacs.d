@@ -303,6 +303,24 @@ With arg N, insert N newlines."
 (setq guide-key/recursive-key-sequence-flag t)
 (diminish 'guide-key-mode)
 
+;; <shafi> auto-insert mode
+(add-hook 'find-file-hook 'auto-insert)
+(auto-insert-mode 1)
+
+(setq auto-insert-directory (expand-file-name "templates" user-emacs-directory))
+(setq auto-insert-query nil) ;;; If you don't want to be prompted before insertion
+
+
+(defun sk/autoinsert-yas-expand()
+  "Replace text in yasnippet template."
+  (yas-expand-snippet (buffer-string) (point-min) (point-max)))
+
+(define-auto-insert "\\.el$" ["default-lisp.el" sk/autoinsert-yas-expand])
+(define-auto-insert "\\.sh$" ["default-sh.sh" sk/autoinsert-yas-expand])
+(define-auto-insert "/bin/"  ["default-sh.sh" sk/autoinsert-yas-expand])
+(define-auto-insert "sprint-.*.org$"  ["sprint.org" sk/autoinsert-yas-expand])
+
+
 ;; <shafi> yasnippets
 (require-package 'yasnippet)
 (yas-global-mode 1)
