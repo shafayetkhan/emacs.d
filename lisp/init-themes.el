@@ -93,11 +93,11 @@ ignored: use `custom-enabled-themes' instead."
   (interactive)
   (custom-set-faces
    '(org-block-begin-line
-     ((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF"))))
+     ((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#E7FFDD"))))
    '(org-block-background
      ((t (:background "#FFFFEA"))))
    '(org-block-end-line
-     ((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF"))))
+     ((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#E7FFDD"))))
 
    '(mode-line-buffer-id ((t (:foreground "#005000" :bold t))))
    '(which-func ((t (:foreground "#008000")))))
@@ -118,9 +118,9 @@ ignored: use `custom-enabled-themes' instead."
    '(org-block-end-line
      ((t (:foreground "#008ED1" :background "#002E41"))))
 
-   '(mode-line ((t (:foreground "#3A85BD"))))
+   ;;'(mode-line ((t (:foreground "#3A85BD"))))
    ;;'(mode-line ((t (:background "#292B2D" :foreground "#3A85BD"))))
-   '(mode-line-buffer-id ((t (:foreground "SpringGreen3" :bold t))))
+   '(mode-line-buffer-id ((t (:foreground "Black" :bold t))))
    '(which-func ((t (:foreground "green")))))
 
   ;; Looks like the minibuffer issues are only for v23
@@ -151,6 +151,7 @@ ignored: use `custom-enabled-themes' instead."
          (headline2        `(:inherit default :weight bold :foreground "#bf616a"))
          (headline3        `(:inherit default :weight bold :foreground, base-font-color)))
     (custom-theme-set-faces 'sk/org-theme
+     ;;                       `(mode-line ((t (:background "DarkOrange" :foreground "Black"))))
                             `(org-agenda-structure ((t (:inherit default ,@sans-font :height 2.0 :underline nil))))
                             `(org-level-8 ((t (,@headline ,@sans-font))))
                             `(org-level-7 ((t (,@headline ,@sans-font))))
