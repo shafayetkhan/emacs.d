@@ -27,6 +27,17 @@
 (global-set-key (kbd "C-M-=") 'default-text-scale-increase)
 (global-set-key (kbd "C-M--") 'default-text-scale-decrease)
 
+;; <shafi> Advising default-text-scale to reset powerline
+(defadvice default-text-scale-increase (after sk/reload-powerline-after-font-increase activate)
+  "Reload powerline when increasing font size."
+  (when (require 'powerline nil t)
+    (powerline-reset)))
+
+(defadvice default-text-scale-decrease (after sk/reload-powerline-after-font-decrease activate)
+  "Reload powerline when decreasing font size."
+  (when (require 'powerline nil t)
+    (powerline-reset)))
+
 
 (defun sanityinc/maybe-adjust-visual-fill-column ()
   "Readjust visual fill column when the global font size is modified.
