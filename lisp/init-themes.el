@@ -57,7 +57,7 @@ ignored: use `custom-enabled-themes' instead."
       (load-theme theme)))
   (custom-set-variables `(custom-enabled-themes (quote ,custom-enabled-themes))))
 
-(add-hook 'after-init-hook 'reapply-themes)
+;(add-hook 'after-init-hook 'reapply-themes)
 
 
 ;;------------------------------------------------------------------------------
@@ -133,9 +133,8 @@ ignored: use `custom-enabled-themes' instead."
 (defun sk/change-theme (theme org-block-style)
   "Changes the color scheme and reset the mode line."
   (funcall theme)
-  ;; TODO: This is a hack. Figure out a better way to run powerline-reset
-  (require 'powerline)
-  (powerline-reset)
+  ;; Note: This is commented since powerline-reset is called in sk/light and sk/dark functions
+  ;;(eval-after-load 'powerline '(powerline-reset))
   (funcall org-block-style)
 
   (let* ((sans-font (cond ((x-list-fonts "Input Mono") '(:font "Input Mono"))
@@ -169,7 +168,9 @@ ignored: use `custom-enabled-themes' instead."
   "Activate a dark color theme."
   (interactive)
   (sk/change-theme 'color-theme-sanityinc-solarized-light
-                   'org-src-color-blocks-light))
+                   'org-src-color-blocks-light)
+  (eval-after-load 'color-identifiers-mode '(color-identifiers:refresh))
+  (eval-after-load 'powerline '(powerline-reset)))
 
 (defun sk/dark ()
   "Activate a dark color theme."
@@ -177,9 +178,16 @@ ignored: use `custom-enabled-themes' instead."
   (sk/change-theme 'color-theme-sanityinc-tomorrow-night
                    'org-src-color-blocks-dark)
   (load-theme 'base16-default-dark 't)
-  (load-theme 'brin 't))
+  (load-theme 'brin 't)
+  (eval-after-load 'color-identifiers-mode '(color-identifiers:refresh))
+  (set-face-attribute 'mode-line nil
+                      :foreground "Black"
+                      :background "DarkOrange"
+                      :box nil)
+  (eval-after-load 'powerline '(powerline-reset)))
 
 (add-hook 'after-init-hook 'sk/dark)
+;;(sk/dark)
 
 
 (provide 'init-themes)
