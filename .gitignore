@@ -47,3 +47,5 @@ site-lisp/package/
 /viper
 /custom.el
 /site-lisp/org-mode/
+/request/
+/site-lisp/org-todoist/
