@@ -137,12 +137,7 @@ ignored: use `custom-enabled-themes' instead."
   ;;(eval-after-load 'powerline '(powerline-reset))
   (funcall org-block-style)
 
-  (let* ((sans-font (cond ((x-list-fonts "Input Mono") '(:font "Input Mono"))
-                          ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
-                          ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
-                          ((x-list-fonts "Verdana")         '(:font "Verdana"))
-                          ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
-                          (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+  (let* ((sans-font '(:font "Input Mono"))
          (base-font-color  (face-foreground 'default nil 'default))
          (background-color (face-background 'default nil 'default))
          (primary-color    (face-foreground 'mode-line nil))
@@ -151,7 +146,7 @@ ignored: use `custom-enabled-themes' instead."
          (headline2        `(:inherit default :weight bold :foreground "#bf616a"))
          (headline3        `(:inherit default :weight bold :foreground, base-font-color)))
     (custom-theme-set-faces 'sk/org-theme
-     ;;                       `(mode-line ((t (:background "DarkOrange" :foreground "Black"))))
+                            ;;                       `(mode-line ((t (:background "DarkOrange" :foreground "Black"))))
                             `(org-agenda-structure ((t (:inherit default ,@sans-font :height 2.0 :underline nil))))
                             `(org-level-8 ((t (,@headline ,@sans-font))))
                             `(org-level-7 ((t (,@headline ,@sans-font))))
@@ -179,13 +174,21 @@ ignored: use `custom-enabled-themes' instead."
   (sk/change-theme 'color-theme-sanityinc-tomorrow-night
                    'org-src-color-blocks-dark)
   (load-theme 'base16-default-dark 't)
-  (load-theme 'brin 't)
+  (when (memq window-system '(mac ns x))
+    (load-theme 'brin 't))
   (eval-after-load 'color-identifiers-mode '(color-identifiers:refresh))
   (set-face-attribute 'mode-line nil
                       :foreground "Black"
                       :background "DarkOrange"
                       :box nil)
+  ;; for org-capture headline!!!
+  (set-face-attribute 'header-line nil
+                                        ;:inherit mode-line
+                      :foreground "Black"
+                      :background "DarkOrange"
+                      :box nil)
   (eval-after-load 'powerline '(powerline-reset)))
+
 
 (add-hook 'after-init-hook 'sk/dark)
 ;;(sk/dark)
