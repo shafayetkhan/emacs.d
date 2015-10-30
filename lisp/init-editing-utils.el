@@ -325,9 +325,10 @@ With arg N, insert N newlines."
 (require-package 'yasnippet)
 (yas-global-mode 1)
 
-(when (file-directory-p "~/.emacs.d/plugins/snippets")
-  (setq yas/root-directory "~/.emacs.d/plugins/snippets")
-  (yas/initialize))
+(with-eval-after-load 'yasnippet
+  (when (file-directory-p "~/.emacs.d/plugins/snippets")
+    (setq yas-snippet-dirs "~/.emacs.d/plugins/snippets")
+    (yas-reload-all)))
 
 (global-set-key (kbd "C-c i y") 'yas/describe-tables)
 
