@@ -393,9 +393,38 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
                 'smarter-move-beginning-of-line)
 
-;; Enable guru-mode and stop using arrow keys
+;; <shafi> Enable guru-mode and stop using arrow keys
 (require-package 'guru-mode)
 (guru-global-mode +1)
-;(setq guru-warn-only t)
+                                        ;(setq guru-warn-only t)
+
+;; <shafi> Smarter paragraph movement -  http://ergoemacs.org/emacs/emacs_move_by_paragraph.html
+(defun xah-forward-block (&optional φn)
+  "Move cursor forward to the beginning of next text block.
+A text block is separated by blank lines.
+In most major modes, this is similar to `forward-paragraph', but this command's behavior is the same regardless of syntax table."
+  (interactive "p")
+  (let ((φn (if (null φn) 1 φn)))
+    (search-forward-regexp "\n[\t\n ]*\n+" nil "NOERROR" φn)))
+
+(defun xah-backward-block (&optional φn)
+  "Move cursor backward to previous text block.
+See: `xah-forward-block'"
+  (interactive "p")
+  (let ((φn (if (null φn) 1 φn))
+        (ξi 1))
+    (while (<= ξi φn)
+      (if (search-backward-regexp "\n[\t\n ]*\n+" nil "NOERROR")
+          (progn (skip-chars-backward "\n\t "))
+        (progn (goto-char (point-min))
+               (setq ξi φn)))
+      (setq ξi (1+ ξi)))))
+
+;; map M-p to `xah-forward-block'
+(global-set-key (kbd "s-n") 'xah-forward-block)
+
+;; map M-n to `xah-backward-block'
+(global-set-key (kbd "s-p") 'xah-backward-block)
+
 
 (provide 'init-editing-utils)
