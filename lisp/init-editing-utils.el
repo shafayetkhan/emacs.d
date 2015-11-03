@@ -355,6 +355,16 @@ With arg N, insert N newlines."
 (global-set-key (kbd "C-q") 'scroll-n-lines-behind)
 (global-set-key (kbd "C-z") 'scroll-n-lines-ahead)
 
+;; <shafi> sublimity mode
+(require-package 'sublimity)
+(require 'sublimity)
+(require 'sublimity-scroll)
+(require 'sublimity-map)
+;; (require 'sublimity-attractive)
+(sublimity-map-set-delay 10)
+
+;(sublimity-mode 1)
+
 ;; Smarter navigation to the beginning of a line
 (defun smarter-move-beginning-of-line (arg)
   "Move point back to indentation of beginning of line.
