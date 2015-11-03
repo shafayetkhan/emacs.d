@@ -453,6 +453,7 @@ typical word processor."
 (setq org-src-fontify-natively t)
 
 ;; <shafi> Require init-todoist
-(require 'org-todoist)
+(when (require 'org-todoist nil t)
+  (message "ORG-TODOIST prototype has been loaded for testing."))
 
 (provide 'init-org)
