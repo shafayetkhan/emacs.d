@@ -49,3 +49,4 @@ site-lisp/package/
 /site-lisp/org-mode/
 /request/
 /site-lisp/org-todoist/
+/secrets.el.gpg
