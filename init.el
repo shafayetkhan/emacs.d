@@ -72,6 +72,7 @@
 (require 'init-shell) ; <shafi>
 (require 'init-project) ; <shafi>
 (require 'init-views) ; <shafi>
+(require 'init-irc) ; <shafi>
 (require 'init-fonts)
 (require 'init-mmm)
 
