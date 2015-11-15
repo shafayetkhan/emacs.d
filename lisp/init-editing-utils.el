@@ -427,4 +427,9 @@ See: `xah-forward-block'"
 (global-set-key (kbd "s-p") 'xah-backward-block)
 
 
+;; <shafi> Indent guide?
+;; (require-package 'indent-guide)
+;; (indent-guide-global-mode)
+;; (setq indent-guide-char "┊")
+
 (provide 'init-editing-utils)
