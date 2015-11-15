@@ -97,6 +97,9 @@ Call a second time to restore the original window configuration."
 (require-package 'ace-window)
 (global-set-key (kbd "C-c w") 'ace-window)
 
-
+;; <shafi> Eyebrowse https://github.com/wasamasa/eyebrowse
+(require-package 'eyebrowse)
+(eyebrowse-mode t)
+
 
 (provide 'init-windows)
