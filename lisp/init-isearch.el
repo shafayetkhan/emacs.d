@@ -71,5 +71,12 @@ This is useful when followed by an immediate kill."
 
 (define-key isearch-mode-map [(control return)] 'isearch-exit-other-end)
 
+
+;; <shafi> flx-isearch
+(require-package 'flx-isearch)
+(global-set-key (kbd "C-M-s") #'flx-isearch-forward)
+(global-set-key (kbd "C-M-r") #'flx-isearch-backward)
+
+
 
 (provide 'init-isearch)

@@ -33,6 +33,11 @@
 (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
 (setq ido-vertical-show-count t)
 
-
+;; <shafi> flx-ido
+(require-package 'flx-ido)
+(flx-ido-mode +1)
+;; Recommended here https://github.com/lewang/flx
+(setq gc-cons-threshold 20000000)
+
 
 (provide 'init-ido)
