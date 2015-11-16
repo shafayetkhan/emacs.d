@@ -81,8 +81,8 @@ ignored: use `custom-enabled-themes' instead."
 ;; Activate powerline
 ;;------------------------------------------------------------------------------
 (require-package 'powerline)
-(add-hook 'after-init-hook 'powerline-default-theme)
-
+;; Use this if only using powerline
+;; (add-hook 'after-init-hook 'powerline-default-theme)
 ;;------------------------------------------------------------------------------
 ;; Setup theme for Org-mode
 ;; Taken from: https://github.com/howardabrams/dot-files/blob/6433f7593b6a2832ddd5806ff14cea1451fd0261/emacs-client.org
@@ -98,8 +98,7 @@ ignored: use `custom-enabled-themes' instead."
      ((t (:background "#FFFFEA"))))
    '(org-block-end-line
      ((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#E7FFDD"))))
-
-   '(mode-line-buffer-id ((t (:foreground "#005000" :bold t))))
+   ;; '(mode-line-buffer-id ((t (:foreground "#005000" :bold t))))
    '(which-func ((t (:foreground "#008000")))))
 
   ;; Looks like the minibuffer issues are only for v23
@@ -117,10 +116,9 @@ ignored: use `custom-enabled-themes' instead."
      ((t (:background "#111111"))))
    '(org-block-end-line
      ((t (:foreground "#008ED1" :background "#002E41"))))
-
    ;;'(mode-line ((t (:foreground "#3A85BD"))))
    ;;'(mode-line ((t (:background "#292B2D" :foreground "#3A85BD"))))
-   '(mode-line-buffer-id ((t (:foreground "Black" :bold t))))
+   ;; '(mode-line-buffer-id ((t (:foreground "Black" :bold t))))
    '(which-func ((t (:foreground "green")))))
 
   ;; Looks like the minibuffer issues are only for v23
@@ -133,8 +131,6 @@ ignored: use `custom-enabled-themes' instead."
 (defun sk/change-theme (theme org-block-style)
   "Changes the color scheme and reset the mode line."
   (funcall theme)
-  ;; Note: This is commented since powerline-reset is called in sk/light and sk/dark functions
-  ;;(eval-after-load 'powerline '(powerline-reset))
   (funcall org-block-style)
 
   (when (memq window-system '(mac ns x))
@@ -199,5 +195,14 @@ ignored: use `custom-enabled-themes' instead."
 (add-hook 'after-init-hook 'sk/dark)
 ;;(sk/dark)
 
+;; <shafi> Spaceline
+;; https://github.com/TheBB/spaceline
+(require-package 'spaceline)
 
+(require 'spaceline-config)
+;;(spaceline-spacemacs-theme)
+(spaceline-emacs-theme)
+
+
 (provide 'init-themes)
+;;; init-themes.el ends here
